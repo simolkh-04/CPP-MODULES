@@ -3,7 +3,7 @@
 
 Zombie::Zombie()
 {
-    _name = "NAME : ";
+    this->_name = "NAME : ";
 }
 
 Zombie::~Zombie()
