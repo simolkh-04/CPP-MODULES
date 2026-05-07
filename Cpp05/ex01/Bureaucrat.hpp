@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <form.hpp>
 
 class Bureaucrat
 {
@@ -17,6 +18,7 @@ class Bureaucrat
         virtual ~Bureaucrat();
         std::string getName() const;
         int getGrade() const;
+        void signForm(Form &f);
 
         class GradeTooHighException : public std::exception {
             public:

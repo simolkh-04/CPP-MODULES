@@ -35,6 +35,19 @@ void Bureaucrat::decrementGrade()
         throw Bureaucrat::GradeTooLowException();
     this->_grade++;
 }
+void Bureaucrat::signForm(Form &f)
+{
+    try
+    {
+        f.beSigned(*this);
+        std::cout << _name << "signed" << f.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << _name << "couldn't signe" << f.getName() << "cuzz" << e.what() << std::endl;
+    }
+    
+}
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
 {
     os << b.getName() << ", bureaucrat grade " << b.getGrade();
