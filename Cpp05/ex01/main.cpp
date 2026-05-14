@@ -1,14 +1,15 @@
 #include "Bureaucrat.hpp"
+#include "form.hpp"
 #include <iostream>
 
 int main()
 {
     try
     {
-        Bureaucrat b("simo", 150);
-        std::cout << b << std::endl;
-        b.incrementGrade();
-        std::cout << "apre increment : " << b << std::endl;
+        Bureaucrat b("simo", 1);
+        Bureaucrat s("stagier", 150);
+        Form contract("contract important", 50, 20);
+        
     }
     catch(std::exception &e)
     {
