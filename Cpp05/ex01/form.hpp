@@ -1,11 +1,11 @@
 #ifndef FORM_HPP
 #define FORM_HPP
 
-// #include <iostream>
+#include <iostream>
 #include <exception>
 #include <string>
-#include <Bureaucrat.hpp>
 
+class Bureaucrat;
 class Form
 {
     private:
