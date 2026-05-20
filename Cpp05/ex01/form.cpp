@@ -41,10 +41,10 @@ void Form::beSigned(const Bureaucrat &b)
     }
     _isSigned = true;
 }
-// std::ostream &operator<<(std::ostream &o, const Form &f) {
-//     o << "Form: " << f.getName() 
-//       << " | Signed: " << (f.getIsSigned() ? "Yes" : "No")
-//       << " | Grade to Sign: " << f.getGradeToSign()
-//       << " | Grade to Execute: " << f.getGradeToExecute();
-//     return o;
-// }
+std::ostream &operator<<(std::ostream &o, const Form &f) {
+     o << "Form: " << f.getName() 
+       << " | Signed: " << (f.getIsSigned() ? "Yes" : "No")
+       << " | Grade to Sign: " << f.getGradeToSign()
+       << " | Grade to Execute: " << f.getGradeToExecute();
+     return o;
+ }

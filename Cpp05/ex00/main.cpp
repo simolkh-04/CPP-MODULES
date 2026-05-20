@@ -5,10 +5,10 @@ int main()
 {
     try
     {
-        Bureaucrat b("simo", 150);
-        std::cout << b << std::endl;
-        b.incrementGrade();
-        std::cout << "apre increment : " << b << std::endl;
+        Bureaucrat s("simo", 150);
+        std::cout << s << std::endl;
+        s.incrementGrade();
+        std::cout << "apre increment : " << s << std::endl;
     }
     catch(std::exception &e)
     {
