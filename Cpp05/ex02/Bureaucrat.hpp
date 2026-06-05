@@ -19,8 +19,8 @@ class Bureaucrat
         virtual ~Bureaucrat();
         std::string getName() const;
         int getGrade() const;
-        void signForm(Form &f);
-
+        void signForm(AForm &f);
+        void executeForm(AForm const & form);
         class GradeTooHighException : public std::exception {
             public:
                 virtual const char* what() const throw() {
@@ -37,7 +37,6 @@ class Bureaucrat
 
         void incrementGrade();
         void decrementGrade();
-        void executeForm(AForm const & form);
         
     };
     std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
