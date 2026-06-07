@@ -1,10 +1,11 @@
-NAME = ex01
+NAME = ex02
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Bureaucrat.cpp form.cpp
+SRC = main.cpp Bureaucrat.cpp Aform.cpp PresidentialPardonForm.cpp \
+	  RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
