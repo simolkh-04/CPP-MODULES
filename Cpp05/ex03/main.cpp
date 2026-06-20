@@ -1,6 +1,8 @@
 #include "Intern.hpp"
 #include "Bureaucrat.hpp"
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 int main()
 {
