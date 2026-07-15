@@ -3,13 +3,9 @@
 
 ScalarConverter::ScalarConverter() {}
 
-ScalarConverter::ScalarConverter(const ScalarConverter &src) {}
-
+ScalarConverter::ScalarConverter(const ScalarConverter &src) { (void)src; }
 ScalarConverter &ScalarConverter::operator=(const ScalarConverter &src) {
-    if (this != &src)
-    {
-        ScalarConverter::operator=(src);
-    }
+    (void)src;
     return *this;
 }
 
@@ -60,7 +56,7 @@ void ScalarConverter::convert(const std::string &literal)
         else
             std::cout << "char: Non displayable" << std::endl;
     }
-    if(val < INT_MIN || val < INT_MAX)
+    if(val < INT_MIN || val > INT_MAX)
         std::cout << "int: impossible" << std::endl;
     else
         std::cout << "int : " << static_cast<int>(val) << std::endl;
@@ -68,4 +64,3 @@ void ScalarConverter::convert(const std::string &literal)
     std::cout << "double : " << std::fixed << std::setprecision(1) << static_cast<double>(val) << std::endl;
     
 }
-

@@ -2,13 +2,10 @@
 
 Serializer::Serializer() {}
 
-Serializer::Serializer(const Serializer &src) {}
+Serializer::Serializer(const Serializer &src) {(void)src;}
 
 Serializer &Serializer::operator=(const Serializer &src) {
-    if(this != &src)
-    {
-        Serializer::operator=(src);
-    }
+    (void)src;
     return *this;
 }
 
