@@ -10,9 +10,9 @@
 class ScalarConverter{
     private:
         ScalarConverter();
-        ScalarConverter(ScalarConverter const &src);
+        ScalarConverter(const ScalarConverter &src);
+        ScalarConverter &operator=(const ScalarConverter &src);
         ~ScalarConverter();
-        ScalarConverter &operator=(ScalarConverter const &src);
     public:
         static void convert(const std::string &literal);
 };

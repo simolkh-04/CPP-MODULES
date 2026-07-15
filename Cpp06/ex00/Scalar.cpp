@@ -1,6 +1,20 @@
 #include "Scalar.hpp"
 #include <iomanip>
 
+ScalarConverter::ScalarConverter() {}
+
+ScalarConverter::ScalarConverter(const ScalarConverter &src) {}
+
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &src) {
+    if (this != &src)
+    {
+        ScalarConverter::operator=(src);
+    }
+    return *this;
+}
+
+ScalarConverter::~ScalarConverter() {}
+
 void ScalarConverter::convert(const std::string &literal)
 {
     if (literal == "nan" || literal == "nanf") {
@@ -54,3 +68,4 @@ void ScalarConverter::convert(const std::string &literal)
     std::cout << "double : " << std::fixed << std::setprecision(1) << static_cast<double>(val) << std::endl;
     
 }
+

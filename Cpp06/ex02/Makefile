@@ -1,10 +1,10 @@
-NAME = Serialization
+NAME = Identify
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Serialization.cpp
+SRC = main.cpp identify.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -13,7 +13,7 @@ $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
 
 clean:
-	rm -rf $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -rf $(NAME)

@@ -7,9 +7,9 @@
 class Serializer {
 private:
     Serializer();
-    Serializer(Serializer const &src);
+    Serializer(const Serializer &src);
+    Serializer &operator=(const Serializer &src);
     ~Serializer();
-    Serializer &operator=(Serializer const &rhs);
 
 public:
     static uintptr_t serialize(Data* ptr);
