@@ -32,7 +32,7 @@ int main() {
 
     std::stack<int> s(mstack);
 
-    std::cout << "\n=== COMPARAISON AVEC STD::LIST ===" << std::endl;
+   /* std::cout << "\n=== COMPARAISON AVEC STD::LIST ===" << std::endl;
     std::list<int> lstack;
 
     lstack.push_back(5);
@@ -60,4 +60,5 @@ int main() {
     }
 
     return 0;
+*/
 }
